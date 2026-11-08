@@ -1,103 +1,89 @@
-# Methods and limitations
+# Review notes and limitations
 
 **Data Provided by Zillow Group**
 
-## Original evidence and publication edits
+These November 2026 review notes accompany the **complete original 2025 final
+project**. They do not replace its narrative or remove any of its questions,
+calculations, conclusions or figures. Read the original work in
+[FINAL_PROJECT.md](FINAL_PROJECT.md) or the
+[complete notebook](notebooks/zillow_home_value_analysis.ipynb).
 
-The final notebook was recovered from the authenticated shared team folder on
-November 8, 2026. It matches the retained local final version byte-for-byte.
-The title, three collaborators and feedback-named charts corroborate project
-identity. No available Canvas submission attachment establishes exact submission
-byte identity.
+## Original project and source identity
 
-The public copy retains original code through source cell 61 unchanged. It strips
-all original outputs, execution counts and private notebook/cell metadata;
-removes the institutional-logo reference; replaces unsupported recommendation
-narratives; inserts review warnings; and omits source cells 62-69 containing
-profit/income scenarios and conclusions. The precise source-to-public cell mapping
-is recorded in [notebook_inventory.json](technical/notebook_inventory.json).
+The shared-team final notebook was recovered on November 8, 2026 and matches the
+retained local copy byte-for-byte. The public notebook now preserves all 70 cells,
+46 code cells, original saved outputs and 18 PNGs, including Questions 5 and 6.
+Its SHA-256 matches the recovered source exactly. The referenced header photograph
+is also supplied separately so its original relative image link works.
+
+The project title, team names and feedback-named charts match the course feedback.
+An available Canvas attachment did not establish exact submitted-file byte identity;
+the verified byte identity is to the shared team's final notebook.
 
 ## Metric definitions
 
-ZHVI represents typical home values rather than prices only for homes that sold.
-It should not be relabeled as median transaction price. The notebook's national
-median-sale-price figure instead loads a separate sale-price series. See
-[ZHVI methodology](https://www.zillow.com/research/zhvi-methodology/).
+ZHVI measures typical home values, not median prices solely for homes that sold.
+The national median-sale-price plot uses a separate weekly transaction-price input.
+ZORI is an asking-rent index, not collected rental income. The pending-duration
+series concerns listing-to-pending time, not time to rent or the full period to
+closing. Definitions: [Zillow Research data](https://www.zillow.com/research/data/),
+[ZHVI](https://www.zillow.com/research/zhvi-methodology/) and
+[ZORI](https://www.zillow.com/research/methodology-zori-repeat-rent/).
 
-ZORI tracks asking-rent changes and is not a record of rent collected by an
-investor. Rental-index movement does not establish realized property income.
-See [ZORI methodology](https://www.zillow.com/research/methodology-zori-repeat-rent/).
+## Data and input inventory
 
-The pending-days input concerns the interval to pending status, not the entire
-listing-to-closing process or a measured time to rent a property. Inventory and
-sales counts are different measures; their ratio is not automatically days.
-Definitions are available on the [provider's data page](https://www.zillow.com/research/data/).
-
-## Data preparation and coverage
-
-The metro workflow identifies date columns, forward-fills selected series,
-filters rows for missing observations, reshapes wide series into long records and
-joins on region/state/date. These choices affect the retained geography and time
-coverage. Other source cells use national aggregate rows and separate weekly
-series; they should not be confused with averages across all metros.
-
-The input audit found all 16 distinct required CSV filenames. Two filenames,
-`msa_values.csv` and the metro ZHVI input, have identical content, leaving 15
-unique hashes. Input availability is not evidence that keys are unique after
-every transformation, that joins are valid, or that every retained observation is
-nonmissing. Date ranges differ between series. File fingerprints identify the
-recovered snapshots, not a provider-release or acquisition timestamp.
+All 16 distinct CSV filenames referenced by the notebook are retained privately.
+There are 15 distinct content hashes because `msa_values.csv` equals the metro
+ZHVI input. Historical date ranges and missing values differ across series.
+Availability does not establish valid joins, complete observations or a successful
+clean-kernel replay. National aggregates and metro rows should be treated separately.
+Current provider downloads may revise past values and need not match these snapshots.
 
 ## Legacy market-duration issue
 
-In source cell 49 the numerator comes from `df_q4['Inventory']`, while the
-denominator uses `df['SalesCount']`. An earlier loop leaves `df` bound to the
-separate long-form sales dataframe. Pandas division aligns those objects by row
-index rather than the merged region/date keys; that is not the intended join.
-The unchanged source is annotated rather than silently repaired.
+In original source cell 49, `df_q4['Inventory']` is divided by
+`df['SalesCount'] + 1`. An earlier loop leaves `df` bound to the separate long-form
+sales dataframe. Pandas aligns by row index rather than the intended region/date
+keys. The three corresponding saved views inherit that alignment or selection issue.
+An inventory/sales ratio also is not a days measure, despite the shared original
+chart label. The full original code and images are preserved; this issue has not
+been silently repaired or claimed as a validated market-duration result.
 
-The three associated saved figures inherit this alignment/selection issue. The
-comparison chart also places an inventory/sales ratio alongside a days measure
-under a shared days label. These are archived diagnostics, not validated
-fastest/slowest-market findings. The actual pending-days measure also does not
-measure rental duration.
+## Original label issues
 
-## Other visual-label issues
+The sales-count and inventory trend panels retain a Home Value axis label.
+The national sales-count figure repeats the inventory chart title. The gallery
+captions distinguish these original labels from the intended data fields.
 
-The source images are preserved unchanged. The sales-count and inventory trend
-panels reuse a Home Value y-axis label. The national sales-count chart repeats the
-inventory chart title. Captions identify the source fields and distinguish those
-label errors from the actual intended measures.
+## Model evaluation
 
-## Historical model
+The original source fits an XGBoost model within a scikit-learn preprocessing
+pipeline. Evaluation uses a random 80/20 row split across repeated neighborhoods
+and dates. It is not an out-of-time or spatial holdout. Nearby observations and
+overlapping target horizons can make prospective performance appear optimistic.
 
-The source constructs seasonal sine/cosine features, geographic value differences
-and 12/24/36-row trends. It fits an XGBoost regressor using a scikit-learn pipeline
-with categorical encoding, imputation and numeric scaling. The model targets a
-future difference in log neighborhood value, which is recomposed into values for
-the historical diagnostic plot.
+The target uses a 24-row shift after filtering, which is not guaranteed to equal
+24 calendar months. The same timing qualification applies to row-based lag features.
+Saved metrics, plots and feature importance are original historical diagnostics;
+no new chronological backtest, baseline comparison or uncertainty calibration has
+been performed here. Feature importance is not a causal explanation.
 
-Evaluation uses a random 80/20 row split across repeated neighborhoods and dates.
-This is not an out-of-time or spatial holdout. Nearby training/test observations
-and overlapping target horizons can produce optimistic results for prospective
-forecasting. The target uses a 24-row shift after filtering; without confirming a
-complete monthly sequence, that is not guaranteed to be a two-calendar-year
-horizon. Row-based lag features have the same timing qualification.
+## Original ROI and monthly-income scenarios
 
-Saved score annotations and feature importances are historical diagnostics only.
-No independent replay, chronological backtest, baseline comparison or uncertainty
-calibration was performed during publication. Feature importance is not a causal
-explanation. No forecasting-accuracy headline or profit promise is supported by
-these figures.
+Questions 5 and 6, their original assumptions, narrative and two saved charts are
+included in full. They are classroom scenario calculations based on the original
+model and cost assumptions. The figures do not establish realized returns or income,
+and no independent replay or validation of those projections was performed during
+publication. These qualifications accompany the original work instead of omitting it.
 
-## Runtime and interpretation boundary
+## New tooling and remaining work
 
-The 16 published figures are saved outputs from the original notebook, not new
-results. No notebook cells were executed to export them. All required CSV names
-were recovered privately, but the Census state-boundary resource and the complete
-runtime environment remain unverified. The public package does not contain raw
-provider data or a deployable trained model.
+The audit/export/report-rendering utilities are November 2026 portfolio tools,
+separate from the original 2025 implementation. Their tests verify preservation,
+privacy boundaries, file mappings and inventory behavior; they do not validate
+the original model or financial outcomes.
 
-This is an academic historical analysis. It does not establish current market
-rankings, realized investment returns, rental income, causal market drivers or a
-property acquisition recommendation.
+A future controlled replay should configure the original inputs and environment,
+verify the Census boundaries, correct the dataframe alignment and labels, confirm
+calendar horizons and evaluate chronologically against meaningful baselines.
+No such fresh end-to-end run is claimed by this publication update.

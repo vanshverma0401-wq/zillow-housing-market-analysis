@@ -1,67 +1,57 @@
-# Technical evidence and provenance
+# Complete final project evidence
 
 **Data Provided by Zillow Group**
 
-## Source identity
-
-The shared-team `FINAL_NOTEBOOK.ipynb` was recovered through the authenticated
-project folder on November 8, 2026. Its SHA-256 is
+The canonical [final notebook](../notebooks/zillow_home_value_analysis.ipynb) is now
+byte-identical to the authenticated shared-team `FINAL_NOTEBOOK.ipynb`:
 `740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6`.
-It is byte-identical to the retained local final notebook. Its title, three authors
-and named figures match the project described in course feedback. No available
-Canvas attachment establishes byte-for-byte identity to the submitted file.
+It contains all 70 cells, 46 code cells, saved outputs and 18 original PNGs.
+No source sections, conclusions, ROI scenarios or monthly-income figures are omitted.
 
-The original contains 70 cells, 46 code cells and 18 saved PNGs. The public source
-contains 65 cells, including 43 retained original code cells and added review
-notes. It is a documented publication copy, not an unchanged original submission.
-See [notebook inventory](notebook_inventory.json).
+The original Markdown also references a separate `oak_grove.png` illustration.
+That file was absent from the recovered source materials and scoped local search;
+its original reference is retained with an adjacent availability note. This does
+not affect the 18 embedded chart outputs, all of which are present.
 
-See [source reconciliation](source_reconciliation.json) for the source identity and publication scope.
+The [readable final project](../FINAL_PROJECT.md) represents every source cell and
+output in order, using collapsible code and separate image assets. Only relative
+image references are remapped for GitHub. Its mapping is recorded in
+[final_report_manifest.json](final_report_manifest.json).
 
-## Evidence classes
+## Source reconciliation
 
-| Class | What it establishes | What it does not establish |
-| --- | --- | --- |
-| Original source code | Transformations, model configuration and analytical workflow were present | Clean-kernel execution or prospective forecast validity |
-| Saved PNG outputs | Historical figures existed in the retained notebook | Fresh recomputation, corrected labels or validated numerical findings |
-| Shared-source hash match | Recovered and retained versions are identical | Exact Canvas submission attachment identity |
-| Input inventory | All 16 named CSV inputs are available privately, with schemas and hashes | Valid joins, complete values, metric correctness or a successful notebook replay |
-| Synthetic audit tests | Export/privacy/input-inventory behavior on focused fixtures | Original model quality or financial results |
+The shared-folder and retained local notebooks match byte-for-byte. The title,
+three collaborators and named figures match the course feedback, although no
+available Canvas attachment established submitted-file byte identity.
+See [source reconciliation](source_reconciliation.json) and
+[notebook inventory](notebook_inventory.json).
 
-## Source publication edits
+All 16 required CSV filenames are available privately. Their schemas, dates and
+hashes are recorded in [input_inventory.json](input_inventory.json); there are 15
+distinct hashes. The original header image was also recovered from the shared
+project materials and is present beside the notebook and in the report assets.
 
-[The exporter](../scripts/export_notebook_evidence.py) creates the reviewed
-[notebook](../notebooks/zillow_home_value_analysis.ipynb) and records every retained
-source-cell index, replacement and omission. It strips outputs, execution counts,
-metadata and the institutional-logo reference. It inserts warnings before the
-legacy market-duration and model-training cells and excludes the last eight source
-cells containing ROI/profit/income scenarios and recommendation text.
+## Preservation checks
 
-Sixteen PNGs are exported byte-for-byte from saved payloads; the ROI and net-income
-images are omitted. [The figure manifest](figure_manifest.json) records each
-source-cell/output coordinate, asset hash, size, attribution and evidence class.
-The [gallery](../FIGURE_GALLERY.md) places interpretation limits next to every view.
+- Canonical notebook SHA-256 equals the original shared source.
+- All source cells and saved outputs are preserved.
+- All 18 figure exports match the original PNG payloads.
+- Original team names and all six questions are present.
+- No notebook code was executed or model retrained during publication.
+- Actual credentials, private paths and contact identifiers were absent from the full source audit.
 
-## Input recovery
+The [figure manifest](figure_manifest.json) supplies source-cell/output coordinates,
+asset hashes and historical evidence classifications. The
+[complete gallery](../FIGURE_GALLERY.md) shows every figure.
 
-[The input audit](../scripts/audit_inputs.py) statically discovers literal CSV
-reads and inspects only filenames resolved inside an authorized input directory.
-It does not execute the notebook, download files or train the model. The checked
-[manifest](input_inventory.json) records 16 available required names, zero missing
-names and 15 distinct content hashes.
+## Review notes and tests
 
-The external state-boundary file and original environment are not validated by
-that CSV audit. The public source can naturally have a different notebook hash
-from the retained original because publication edits are deliberate.
+[Methods and limitations](../METHODS_AND_LIMITATIONS.md) documents the existing
+alignment, label, horizon and evaluation issues separately from the final artifact.
+Original numerical annotations and scenario text are preserved as historical work,
+not advertised as independently verified outcomes.
 
-## New tooling and remaining work
-
-Both helpers and their synthetic tests are November 2026 portfolio tooling,
-separate from the original team implementation. Fourteen focused tests cover
-source-output stripping, private-pattern rejection, source immutability,
-input-discovery boundaries, schema inventory and safe output paths.
-
-A controlled future replay should verify the geospatial inputs and environment,
-repair the market-duration denominator using explicit matching keys, confirm
-calendar horizons, use chronological evaluation with suitable separation and
-compare with meaningful baselines. None of those steps is claimed complete here.
+The export, input-audit and report-rendering utilities are new November 2026
+portfolio tooling. Their focused tests verify content preservation and tool
+boundaries. Test success does not establish original model quality or a clean
+end-to-end notebook execution.

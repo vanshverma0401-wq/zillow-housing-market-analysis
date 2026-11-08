@@ -12,7 +12,7 @@
   "source_notebook_cells": 70,
   "source_code_cells": 46,
   "source_saved_png_count": 18,
-  "published_saved_png_count": 16,
+  "published_saved_png_count": 18,
   "canvas_feedback_matches": [
     "project title",
     "three team names",
@@ -32,11 +32,22 @@
   "not_published": [
     "raw source datasets",
     "private sharing URLs",
-    "institutional branding",
     "course feedback",
     "recording",
-    "draft slide deck",
-    "unvalidated ROI/profit/income scenario sections"
+    "draft slide deck"
   ],
-  "runtime_replayed": false
+  "runtime_replayed": false,
+  "public_source_complete": true,
+  "public_notebook_byte_identical_to_original": true,
+  "source_cells_published": 70,
+  "code_cells_published": 46,
+  "header_image_sha256": "c9f5bc51ced76627d58d528087490756a76644c011f55506bdacad17c50e4f41",
+  "publication_update_reason": "Restore the complete final project at the user’s explicit request, replacing the earlier reviewed subset.",
+  "unavailable_original_illustrations": [
+    {
+      "filename": "oak_grove.png",
+      "source_cell_index": 66,
+      "status": "Original reference preserved; file not present in recovered project folder or scoped local search."
+    }
+  ]
 }

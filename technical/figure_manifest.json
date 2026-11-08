@@ -1,11 +1,8 @@
 {
   "source_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
-  "figure_count": 16,
-  "omitted_png_source_cells": [
-    65,
-    68
-  ],
-  "note": "Byte-identical saved PNGs; historical source evidence, not a fresh notebook execution.",
+  "figure_count": 18,
+  "omitted_png_source_cells": [],
+  "note": "All eighteen original saved PNGs are included byte-for-byte. Historical scenarios and model diagnostics are not a fresh notebook execution or validated investment outcome.",
   "figures": [
     {
       "source_cell_index": 32,
@@ -227,6 +224,34 @@
       "sha256": "ee11564cf216458980258960629038a187c9787894b81f0756bc159758fb6e6b",
       "source_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
       "evidence_class": "historical_random_split_model_diagnostic",
+      "freshly_recomputed": false,
+      "validated_finding": false,
+      "data_attribution": "Data Provided by Zillow Group"
+    },
+    {
+      "source_cell_index": 65,
+      "source_output_index": 0,
+      "asset": "assets/figures/original-roi-scenario.png",
+      "title": "Original classroom ROI scenario; unvalidated",
+      "width": 1185,
+      "height": 590,
+      "sha256": "7c5e67f991afd8e61311edd57e100cee9b1e2152658d970767d5e9afee3af14f",
+      "source_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
+      "evidence_class": "historical_unvalidated_classroom_scenario",
+      "freshly_recomputed": false,
+      "validated_finding": false,
+      "data_attribution": "Data Provided by Zillow Group"
+    },
+    {
+      "source_cell_index": 68,
+      "source_output_index": 0,
+      "asset": "assets/figures/original-net-income-scenario.png",
+      "title": "Original classroom monthly-income scenario; unvalidated",
+      "width": 985,
+      "height": 490,
+      "sha256": "60b10afab128e3be22112fb8f8380f38e452aba4f9355b672a5879d2f242c014",
+      "source_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
+      "evidence_class": "historical_unvalidated_classroom_scenario",
       "freshly_recomputed": false,
       "validated_finding": false,
       "data_attribution": "Data Provided by Zillow Group"

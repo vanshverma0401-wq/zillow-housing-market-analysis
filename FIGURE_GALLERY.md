@@ -2,7 +2,7 @@
 
 **Data Provided by Zillow Group**
 
-All sixteen images below are byte-identical saved PNG outputs from the shared-team final notebook. They were not freshly recomputed. Source cell/output coordinates are zero-based and can be checked against [the figure manifest](technical/figure_manifest.json). The two original ROI/income scenario figures are omitted.
+All eighteen images below are byte-identical saved PNG outputs from the shared-team final notebook, including the original ROI and monthly-income scenarios. They were not freshly recomputed. Source cell/output coordinates are zero-based and can be checked against [the figure manifest](technical/figure_manifest.json). Read every original explanation and code cell in the [complete final project](FINAL_PROJECT.md).
 
 Interpretation limits appear beside each figure. Original labels are preserved rather than silently redrawn.
 
@@ -133,3 +133,19 @@ Source cell 59, output 0. *Data Provided by Zillow Group*
 These are saved feature-importance values from the same historical random-split model. They are not causal effects or evidence of an independently validated forecast. Correlated geographic and lag features also limit interpretation.
 
 Source cell 61, output 0. *Data Provided by Zillow Group*
+
+## Figure 17: Original classroom ROI scenario
+
+![Original classroom ROI scenario](assets/figures/original-roi-scenario.png)
+
+This is the original saved Question 5 scenario, with its assumptions, calculations and conclusions preserved in the complete report. It represents the team's historical classroom analysis, rather than measured investment returns. Later methodological observations are separate in [Review notes and limitations](METHODS_AND_LIMITATIONS.md).
+
+Source cell 65, output 0. *Data Provided by Zillow Group*
+
+## Figure 18: Original classroom monthly-income scenario
+
+![Original classroom monthly-income scenario](assets/figures/original-net-income-scenario.png)
+
+This is the original saved Question 6 scenario. Its underlying code, assumptions and narrative are included in the complete report. It does not establish realized rent, operating costs or property-level net income; no new computation was performed for this publication.
+
+Source cell 68, output 0. *Data Provided by Zillow Group*

@@ -1,57 +1,46 @@
-# Data attribution and publication boundary
+# Data attribution and usage
 
 **Data Provided by Zillow Group**
 
-## Primary sources
+## Data sources
 
-The historical project uses Zillow Research housing-market and geographic
-home-value series. Provider documentation:
+- [Zillow Research housing data](https://www.zillow.com/research/data/)
+- [ZHVI methodology](https://www.zillow.com/research/zhvi-methodology/)
+- [ZORI methodology](https://www.zillow.com/research/methodology-zori-repeat-rent/)
+- [Zillow terms](https://www.zillow.com/corporate/terms-of-use/)
 
-- [Housing data and downloads](https://www.zillow.com/research/data/)
-- [Zillow Home Value Index methodology](https://www.zillow.com/research/zhvi-methodology/)
-- [Zillow Observed Rent Index methodology](https://www.zillow.com/research/methodology-zori-repeat-rent/)
-- [Zillow terms of use](https://www.zillow.com/corporate/terms-of-use/)
+Raw Zillow CSVs remain private. The [input inventory](technical/input_inventory.json)
+records all 16 required filenames, schemas, coverage and fingerprints. No open-data
+or MIT license is asserted for these provider files. Current downloads can differ
+from the retained historical snapshots.
 
-ZHVI, rent indices, sale prices, listing counts and pending-duration series are
-separate metrics. The public captions identify their intended roles rather than
-presenting them as interchangeable property-level outcomes.
+## Complete final project
 
-## Retained snapshot evidence
+The public canonical notebook is byte-identical to the final notebook recovered
+from the shared team folder. It preserves all original cells, saved outputs,
+conclusions and 18 figures, including the ROI and monthly-income scenarios.
+The saved outputs contain figures and brief diagnostic text, without a raw dataset
+dump, credentials or personal contact data. The readable Markdown report preserves
+the same content with GitHub navigation and local image-path remapping.
 
-All 16 distinct CSV filenames referenced by the retained notebook were recovered
-from the shared team project materials and inspected privately. Their basenames,
-sizes, hashes, schema summaries and date coverage appear in
-[input_inventory.json](technical/input_inventory.json). There are 15 distinct
-content hashes because the MSA-value and metro-ZHVI files are identical.
+The full project is collaborative work by **Jake Holley, Miranda Dahl and Vansh
+Verma**. Section labels and team credit are retained. Later technical review notes
+are separate from the original report; publishing it does not establish a fresh
+run or independent validation of the original estimates.
 
-Current provider downloads may extend dates or revise past values. They need not
-match the recovered 2025-project snapshot. No acquisition or provider-release
-timestamp was established from the CSV metadata.
+The original header photograph is included only to restore the final project's
+relative image resource. Rights in that supplied image and institutional identity
+remain with their respective holders; no university endorsement is claimed.
+The original map source also references external Census boundaries, which are not
+rehosted or freshly validated here.
 
-## What is public
+## Other materials and tooling
 
-- A reviewed notebook source copy, with original outputs and private metadata removed.
-- Sixteen attributed historical figures exported from saved notebook PNG payloads.
-- Source and input fingerprints, structural metadata and documented publication edits.
-- New static audit utilities and synthetic tests, added in November 2026.
+Private sharing URLs, course feedback, source CSVs, cached Parquet data, the team
+recording and the draft slide deck are not published. The original final notebook,
+all 18 figure exports and header image are included.
 
-## What remains private
-
-Raw Zillow CSVs, shared-folder account URLs, course feedback, institutional logos,
-private notebook versions and the omitted profit/income sections are not
-redistributed. No explicit raw-data rehosting license was established in this
-review; no MIT or other open-data license is asserted for those provider files.
-The provider links above are the starting point for obtaining and reviewing data
-under their applicable conditions.
-
-## Team and other materials
-
-The original academic work is credited to **Jake Holley, Miranda Dahl and Vansh
-Verma**. No sole-authorship claim or new per-person contribution split is created.
-The new audit helpers are separate from the original 2025 analysis. Publication of
-the case study does not transfer ownership of Zillow's data, vendor software,
-third-party geographic resources or institutional branding.
-
-The original map code references a Census state-boundary file. That external
-resource was not revalidated or rehosted during this publication audit. No
-endorsement by Zillow, the university or another provider is claimed.
+The audit and report-rendering helpers and synthetic tests were added in November
+2026. They are separate from the original 2025 project and execute no original
+notebook cells during export. Publication does not transfer ownership of provider
+data, institutional imagery, third-party software or geographic resources.

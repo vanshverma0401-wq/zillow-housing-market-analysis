@@ -1,2 +1,3 @@
-*.ipynb text eol=lf
+notebooks/zillow_home_value_analysis.ipynb -text
 *.png binary
+*.jpg binary
