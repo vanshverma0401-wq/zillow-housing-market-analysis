@@ -1,0 +1,539 @@
+{
+  "inventory_format": 1,
+  "tooling_introduced": "2026-11-08",
+  "tooling_scope": "New static input audit, separate from the original 2025 project code.",
+  "source_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
+  "notebook_code_executed": false,
+  "models_replayed": false,
+  "downloads_performed": false,
+  "data_read_scope": "CSV basenames resolved only inside the supplied data directory; symlinks outside it are blocked.",
+  "requirements": {
+    "literal_csv_call_count": 17,
+    "distinct_required_csv_count": 16,
+    "required_files": [
+      "Metro_invt_fs_uc_sfrcondo_sm_month.csv",
+      "Metro_market_temp_index_uc_sfrcondo_month.csv",
+      "Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv",
+      "Metro_mean_sale_price_uc_sfrcondo_sm_week.csv",
+      "Metro_median_sale_price_uc_sfrcondo_sm_week.csv",
+      "Metro_pct_sold_above_list_uc_sfrcondo_sm_week.csv",
+      "Metro_pct_sold_below_list_uc_sfrcondo_sm_week.csv",
+      "Metro_sales_count_now_uc_sfrcondo_month.csv",
+      "Metro_sales_count_raw_uc_sfrcondo_sm_week.csv",
+      "Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+      "Metro_zori_uc_sfrcondomfr_sm_month.csv",
+      "city_values.csv",
+      "county_values.csv",
+      "msa_values.csv",
+      "neighborhood_values.csv",
+      "state_values.csv"
+    ],
+    "calls_by_filename": {
+      "Metro_invt_fs_uc_sfrcondo_sm_month.csv": 2,
+      "Metro_market_temp_index_uc_sfrcondo_month.csv": 1,
+      "Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv": 1,
+      "Metro_mean_sale_price_uc_sfrcondo_sm_week.csv": 1,
+      "Metro_median_sale_price_uc_sfrcondo_sm_week.csv": 1,
+      "Metro_pct_sold_above_list_uc_sfrcondo_sm_week.csv": 1,
+      "Metro_pct_sold_below_list_uc_sfrcondo_sm_week.csv": 1,
+      "Metro_sales_count_now_uc_sfrcondo_month.csv": 1,
+      "Metro_sales_count_raw_uc_sfrcondo_sm_week.csv": 1,
+      "Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv": 1,
+      "Metro_zori_uc_sfrcondomfr_sm_month.csv": 1,
+      "city_values.csv": 1,
+      "county_values.csv": 1,
+      "msa_values.csv": 1,
+      "neighborhood_values.csv": 1,
+      "state_values.csv": 1
+    },
+    "dynamic_read_csv_call_count": 0,
+    "ignored_nonlocal_or_non_csv_literal_count": 0,
+    "literal_path_prefixes_discarded": 0,
+    "ipython_magic_or_shell_lines_omitted": 0,
+    "unparsed_code_cells": [],
+    "commented_calls_counted": false,
+    "static_scope": "Literal call syntax only; reachability and runtime branches are not evaluated."
+  },
+  "available_required_file_count": 16,
+  "missing_required_file_count": 0,
+  "missing_required_files": [],
+  "blocked_outside_data_directory": [],
+  "available_files": [
+    {
+      "filename": "Metro_invt_fs_uc_sfrcondo_sm_month.csv",
+      "sha256": "e1d76f872d7e821823eb5fe6c58f02ead0b9235d67b91913cf5399559988f00b",
+      "bytes": 506847,
+      "row_count": 928,
+      "column_count": 90,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 85,
+      "first_date_column": "2018-03-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 1191,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 928,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 927
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_market_temp_index_uc_sfrcondo_month.csv",
+      "sha256": "8126e8d2efe31e84329e9bca1376e974ff3c074146da4a1cbf34fc91bcab286d",
+      "bytes": 428714,
+      "row_count": 928,
+      "column_count": 92,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 87,
+      "first_date_column": "2018-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 2264,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 928,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 927
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv",
+      "sha256": "c7b2ec03f4e547209555237f73c5749322f2985ee7dd9712529d9fb2da557eb9",
+      "bytes": 255439,
+      "row_count": 740,
+      "column_count": 90,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 85,
+      "first_date_column": "2018-03-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 21649,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 740,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 739
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_mean_sale_price_uc_sfrcondo_sm_week.csv",
+      "sha256": "c8255ea3752de62a05d186f40c7bb96832360acee4a7eb8419e1855f77976fc1",
+      "bytes": 1471523,
+      "row_count": 234,
+      "column_count": 896,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 891,
+      "first_date_column": "2008-02-23",
+      "last_date_column": "2025-03-15",
+      "empty_date_cell_count": 52889,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 234,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 233
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_median_sale_price_uc_sfrcondo_sm_week.csv",
+      "sha256": "05439d995aad7ba54cc005132a6c1993c4ed2aaa61a40d4fefebdabca1282d75",
+      "bytes": 1465771,
+      "row_count": 234,
+      "column_count": 896,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 891,
+      "first_date_column": "2008-02-23",
+      "last_date_column": "2025-03-15",
+      "empty_date_cell_count": 52796,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 234,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 233
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_pct_sold_above_list_uc_sfrcondo_sm_week.csv",
+      "sha256": "fbc144709ea3a679729093b6534e9a79e867fe18135549d2588c82ee909b614a",
+      "bytes": 1041347,
+      "row_count": 209,
+      "column_count": 378,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 373,
+      "first_date_column": "2018-01-27",
+      "last_date_column": "2025-03-15",
+      "empty_date_cell_count": 26267,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 209,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 208
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_pct_sold_below_list_uc_sfrcondo_sm_week.csv",
+      "sha256": "e37820ed8ea42d89a70c3f19dc1893fbeab24581609c7b1cdf9a55fa495af14e",
+      "bytes": 1028453,
+      "row_count": 209,
+      "column_count": 378,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 373,
+      "first_date_column": "2018-01-27",
+      "last_date_column": "2025-03-15",
+      "empty_date_cell_count": 26262,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 209,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 208
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_sales_count_now_uc_sfrcondo_month.csv",
+      "sha256": "624ed073eba4f43d7cf5baf92189ad9747b147b835e06bed6d57c29a6659915a",
+      "bytes": 135111,
+      "row_count": 94,
+      "column_count": 211,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 206,
+      "first_date_column": "2008-02-29",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 10,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 94,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 93
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_sales_count_raw_uc_sfrcondo_sm_week.csv",
+      "sha256": "515bf2ce0f7a3e47614713e7cabb1a911aaf6850bad5f038493bfdecde542c37",
+      "bytes": 1068524,
+      "row_count": 234,
+      "column_count": 896,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 891,
+      "first_date_column": "2008-02-23",
+      "last_date_column": "2025-03-15",
+      "empty_date_cell_count": 50173,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 234,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 233
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+      "sha256": "721f78a04459583c5d675e9a23b359e571680ac5a5d0e2128c06ac20dba837ac",
+      "bytes": 4188551,
+      "row_count": 895,
+      "column_count": 308,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 49266,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 895,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 894
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "Metro_zori_uc_sfrcondomfr_sm_month.csv",
+      "sha256": "a991236f285e56ae60a6408fc9ec81341b8220fd9c236fa38a18151c3a936c9c",
+      "bytes": 841432,
+      "row_count": 649,
+      "column_count": 128,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 123,
+      "first_date_column": "2015-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 37576,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 649,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 648
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "city_values.csv",
+      "sha256": "692b9f6abeac20f08cd4b0cc878edfa9bc1b55adc4e595262b5ac6c40a3b03a2",
+      "bytes": 87628309,
+      "row_count": 21500,
+      "column_count": 311,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName",
+        "State",
+        "Metro",
+        "CountyName"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 1951874,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 21500,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "city": 21500
+      },
+      "national_country_row_count": 0,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "county_values.csv",
+      "sha256": "4730d609318233be4f4ae99b3de575e4d3132157871850211bd3d6305d5c780a",
+      "bytes": 12595182,
+      "row_count": 3073,
+      "column_count": 312,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName",
+        "State",
+        "Metro",
+        "StateCodeFIPS",
+        "MunicipalCodeFIPS"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 274245,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 3073,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "county": 3073
+      },
+      "national_country_row_count": 0,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "msa_values.csv",
+      "sha256": "721f78a04459583c5d675e9a23b359e571680ac5a5d0e2128c06ac20dba837ac",
+      "bytes": 4188551,
+      "row_count": 895,
+      "column_count": 308,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 49266,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 895,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "country": 1,
+        "msa": 894
+      },
+      "national_country_row_count": 1,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "neighborhood_values.csv",
+      "sha256": "19444d343bf62e489e5c08ed6021cf4ceafdb38f07f74aadf8b64e930187c2ff",
+      "bytes": 96705358,
+      "row_count": 21628,
+      "column_count": 312,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName",
+        "State",
+        "City",
+        "Metro",
+        "CountyName"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 1502262,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 21628,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "neighborhood": 21628
+      },
+      "national_country_row_count": 0,
+      "numeric_metrics_aggregated": false
+    },
+    {
+      "filename": "state_values.csv",
+      "sha256": "77c934d886e4d5ebcc3b099e0348aea8e103c00a12830fcbecdb596ed09d179b",
+      "bytes": 287636,
+      "row_count": 51,
+      "column_count": 308,
+      "metadata_fields": [
+        "RegionID",
+        "SizeRank",
+        "RegionName",
+        "RegionType",
+        "StateName"
+      ],
+      "date_column_count": 303,
+      "first_date_column": "2000-01-31",
+      "last_date_column": "2025-03-31",
+      "empty_date_cell_count": 228,
+      "region_id_field_present": true,
+      "distinct_nonempty_region_ids": 51,
+      "duplicate_region_id_occurrences": 0,
+      "missing_region_id_rows": 0,
+      "region_type_counts": {
+        "state": 51
+      },
+      "national_country_row_count": 0,
+      "numeric_metrics_aggregated": false
+    }
+  ],
+  "distinct_available_content_hash_count": 15,
+  "byte_identical_available_file_groups": [
+    [
+      "Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv",
+      "msa_values.csv"
+    ]
+  ],
+  "common_region_id_count_across_available_id_tables": 0,
+  "common_date_columns_across_available_files": {
+    "count": 12,
+    "first": "2018-03-31",
+    "last": "2024-11-30"
+  },
+  "interpretation": [
+    "Region counts include country and MSA rows where present; no national/metro metric averaging is performed.",
+    "Shared column or identifier counts do not prove complete nonmissing observations or valid joins.",
+    "Byte-identical filenames are identified without changing or combining their records.",
+    "The CSVs do not record an acquisition or provider-release timestamp in their metadata columns.",
+    "Current provider downloads may revise history or extend dates and need not match these retained snapshot hashes.",
+    "Missing files are listed without being fetched; this audit does not establish an end-to-end replay."
+  ]
+}

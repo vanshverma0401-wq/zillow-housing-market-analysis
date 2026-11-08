@@ -1,0 +1,11 @@
+# Imported packages in the retained original notebook.
+# Original versions are not locked; a fresh replay has not been validated.
+# The two public static audit utilities use only Python's standard library.
+pandas
+numpy
+matplotlib
+geopandas
+pyarrow
+seaborn
+scikit-learn
+xgboost

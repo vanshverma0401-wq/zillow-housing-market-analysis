@@ -1,0 +1,42 @@
+{
+  "reconciled_date": "2026-11-08",
+  "original_project_year": 2025,
+  "project_authors": [
+    "Jake Holley",
+    "Miranda Dahl",
+    "Vansh Verma"
+  ],
+  "source_context": "Authenticated shared final-project folder",
+  "original_final_notebook_sha256": "740cf88030647d5e840cc39f58b87a07a6ba1ec985a93417e6c330749189bfb6",
+  "matches_retained_local_final": true,
+  "source_notebook_cells": 70,
+  "source_code_cells": 46,
+  "source_saved_png_count": 18,
+  "published_saved_png_count": 16,
+  "canvas_feedback_matches": [
+    "project title",
+    "three team names",
+    "named chart titles"
+  ],
+  "canvas_submission_attachment_byte_identity_established": false,
+  "source_input_count": 16,
+  "source_input_distinct_content_hashes": 15,
+  "input_status": "All named CSV inputs recovered from the shared team materials and retained privately.",
+  "supporting_materials_reviewed": [
+    "team notebook and source structure",
+    "Vansh source notebook and five metro inputs",
+    "Jake model-folder inventory and eleven additional required CSVs",
+    "Miranda source/data-folder inventory",
+    "ten-slide team presentation text"
+  ],
+  "not_published": [
+    "raw source datasets",
+    "private sharing URLs",
+    "institutional branding",
+    "course feedback",
+    "recording",
+    "draft slide deck",
+    "unvalidated ROI/profit/income scenario sections"
+  ],
+  "runtime_replayed": false
+}
