@@ -1,6 +1,30 @@
 # Zillow Home Value Analysis Final Project
 
+A **Python data-analysis and machine-learning case study** combining Zillow
+housing indicators across metropolitan, neighborhood, city, county and state
+levels. The team prepared and joined time-indexed datasets, explored housing
+markets, visualized geographic patterns and built an XGBoost regression prototype.
+
 Complete 2025 academic final project by **Jake Holley, Miranda Dahl and Vansh Verma**.
+
+**[Read the complete final project](FINAL_PROJECT.md) · [Explore the original notebook](notebooks/zillow_home_value_analysis.ipynb) · [Browse all 18 figures](FIGURE_GALLERY.md)**
+
+![Original home-value trends for selected top- and bottom-ranked metropolitan groups](assets/figures/home-value-trends.png)
+
+*Original saved chart from Question 1. Groups reflect the team's historical
+home-value-growth procedure; these are ZHVI typical-home-value indices and not
+current investment recommendations. Data Provided by Zillow Group.*
+
+## Skills demonstrated
+
+| Skill area | Evidence in this project |
+| --- | --- |
+| **Python, Pandas and NumPy data preparation** | [CSV ingestion, wide-to-long reshaping, multi-key joins and group aggregations](FINAL_PROJECT.md#source-cell-16) |
+| **Exploratory data analysis and visualization** | [Housing, rent, inventory and sales comparisons](FIGURE_GALLERY.md) using Matplotlib and Seaborn |
+| **Geospatial analysis with GeoPandas** | [State-level map code and saved maps](FINAL_PROJECT.md#source-cell-49); the original duration proxy has documented alignment and unit limitations |
+| **Feature engineering and data formats** | [Geographic joins and lagged trend features](FINAL_PROJECT.md#source-cell-53), with CSV and Parquet staging |
+| **Machine-learning preprocessing with scikit-learn** | [Median imputation, categorical encoding, scaling and a ColumnTransformer pipeline](FINAL_PROJECT.md#source-cell-57) |
+| **Supervised learning with XGBoost regression** | [Original training code, saved diagnostic and feature importance](FINAL_PROJECT.md#source-cell-57); prospective time-series performance remains unvalidated |
 
 ## Open the complete final project
 
