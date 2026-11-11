@@ -15,6 +15,13 @@ Complete 2025 academic final project by **Jake Holley, Miranda Dahl and Vansh Ve
 home-value-growth procedure; these are ZHVI typical-home-value indices and not
 current investment recommendations. Data Provided by Zillow Group.*
 
+## New evaluation extension
+
+The [calendar-safe benchmark](REPLAY_EXTENSION.md) adds a runnable, tested metro
+baseline with exact calendar joins, train-only scaling and a purged chronological
+split. A bounded 50-metro historical run compares fixed Ridge against persistence;
+it is separate from the preserved neighborhood XGBoost and financial scenarios.
+
 ## Skills demonstrated
 
 | Skill area | Evidence in this project |
@@ -91,14 +98,18 @@ Supporting evidence:
 
 ## Reproduction status
 
-This publication restores the completed historical project and its saved results.
-It does not claim a new notebook execution or model retraining. Raw Zillow CSVs
+The November 8 publication restored the completed historical project and its
+saved results without a new original-notebook execution or retraining. A separate
+[November 10 extension](REPLAY_EXTENSION.md) now includes a bounded real-input
+metro benchmark, pinned environment, aggregate results and contract tests. Raw Zillow CSVs
 remain private; the public input manifest records their names, schemas and hashes.
 The environment and external Census boundary files still need verification for a
 fresh replay. [requirements-notebook.txt](requirements-notebook.txt) lists imports,
 not an original environment lock.
 
-New November 2026 audit utilities can be checked without running the original model:
+Install [requirements-replay.txt](requirements-replay.txt) in an isolated Python
+3.12 environment, then check both audit utilities and new replay contracts without
+running the original model:
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v

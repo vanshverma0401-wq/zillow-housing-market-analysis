@@ -1,0 +1,75 @@
+{
+  "analysis_date_local": "2026-11-10",
+  "scope": "New bounded metro-level benchmark; not a rerun of the original neighborhood XGBoost or ROI scenarios",
+  "cohort": "First region IDs in numeric order, country excluded; deterministic convenience sample",
+  "regions": 50,
+  "maximum_regions": 50,
+  "retained_price_rows": 12359,
+  "eligible_rows": 9888,
+  "ineligible_feature_or_target_rows": 2471,
+  "horizon_calendar_months": 24,
+  "features": [
+    "log_value",
+    "return12",
+    "return24"
+  ],
+  "split": {
+    "test_start": "2021-01-31",
+    "train_rows": 7344,
+    "test_rows": 1348,
+    "purged_rows": 1196,
+    "train_first_origin": "2002-01-31",
+    "train_last_origin": "2018-12-31",
+    "train_last_target": "2020-12-31",
+    "test_first_origin": "2021-01-31",
+    "test_last_origin": "2023-03-31",
+    "test_last_target": "2025-03-31",
+    "target_overlap": false
+  },
+  "models": {
+    "unchanged_value_baseline": {
+      "rows": 1348,
+      "mae_source_currency": 24849.516454308327,
+      "median_absolute_percentage_error": 9.899387825370606,
+      "root_mean_squared_log_error": 0.1256363222024235
+    },
+    "fixed_ridge": {
+      "rows": 1348,
+      "mae_source_currency": 13357.25953991452,
+      "median_absolute_percentage_error": 4.647431000541532,
+      "root_mean_squared_log_error": 0.07036697733528864
+    }
+  },
+  "selection": "Ridge alpha=1 fixed in advance; no test tuning. StandardScaler fit only on training rows.",
+  "inventory_sales": {
+    "unit": "inventory divided by monthly sales count; not days",
+    "comparison_states": {
+      "MISSING_SALES": 3825,
+      "MISSING_INVENTORY": 605,
+      "COMPARABLE": 425
+    },
+    "comparable_median_ratio": 2.620034542314335
+  },
+  "input_sha256": {
+    "metro_zhvi": "721f78a04459583c5d675e9a23b359e571680ac5a5d0e2128c06ac20dba837ac",
+    "metro_inventory": "e1d76f872d7e821823eb5fe6c58f02ead0b9235d67b91913cf5399559988f00b",
+    "metro_sales": "624ed073eba4f43d7cf5baf92189ad9747b147b835e06bed6d57c29a6659915a"
+  },
+  "limits": [
+    "Historical revised snapshot, not point-in-time data vintages or real-time forecasting.",
+    "Same metros appear across time; no unseen-geography validation.",
+    "Overlapping test horizons create dependent errors; no independent confidence interval claimed.",
+    "No investment recommendation or validated ROI/income claim."
+  ],
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.8.0",
+    "cloudpickle": "3.1.2",
+    "narwhals": "2.28.0"
+  }
+}

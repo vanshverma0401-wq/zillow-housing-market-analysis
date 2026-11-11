@@ -65,8 +65,9 @@ overlapping target horizons can make prospective performance appear optimistic.
 The target uses a 24-row shift after filtering, which is not guaranteed to equal
 24 calendar months. The same timing qualification applies to row-based lag features.
 Saved metrics, plots and feature importance are original historical diagnostics;
-no new chronological backtest, baseline comparison or uncertainty calibration has
-been performed here. Feature importance is not a causal explanation.
+the original model has no new chronological backtest or uncertainty calibration.
+A [separate November 10 metro benchmark](REPLAY_EXTENSION.md) adds an exact-calendar,
+purged chronological baseline comparison; it does not validate this original model. Feature importance is not a causal explanation.
 
 ## Original ROI and monthly-income scenarios
 
@@ -86,4 +87,8 @@ the original model or financial outcomes.
 A future controlled replay should configure the original inputs and environment,
 verify the Census boundaries, correct the dataframe alignment and labels, confirm
 calendar horizons and evaluate chronologically against meaningful baselines.
-No such fresh end-to-end run is claimed by this publication update.
+The November 10 [metro extension](REPLAY_EXTENSION.md) now supplies tested keyed
+reconciliation, exact calendar horizons and a bounded real-input chronological
+comparison. It does not rerun the original neighborhood model, Census-dependent
+maps or financial scenarios. No fresh end-to-end replay of the original notebook
+is claimed.
